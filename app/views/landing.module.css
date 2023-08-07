@@ -5,21 +5,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   z-index: 0;
 }
 .bg {
   position: absolute;
-  overflow-x: hidden;
-  /* overflow-y: auto; */
-  overflow-y: hidden;
   z-index: -1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-.bg > * {
+.bg,
+.bgSecondary {
   position: absolute;
   top: -10%;
   left: -10%;
@@ -29,13 +28,23 @@
   background-size: 100%;
   background-repeat: round;
 }
-.bg > *.layer2 {
+.bgSecondary {
   background-size: 105%;
   background-repeat: repeat;
-  background-position: 10px 0;
+  background-position-x: 10px;
+  background-position-y: 0px;
   opacity: .6;
+  
+  transition: .5s background-position-y;
+  transition-delay: .2s;
+  transition-timing-function: ease-in-out;
 }
+.bgSecondary[data-play=1] {
+  background-position-y: 20px;
+}
+
 .logo {
   width: 250px;
   aspect-ratio: 1 / 1;
+  z-index: 1;
 }
