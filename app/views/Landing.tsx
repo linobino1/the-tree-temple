@@ -33,7 +33,13 @@ export const Landing: React.FC = () => {
     <section className={classes.container}>
       <div className={classes.bg}></div>
       <div className={classes.bgSecondary} ref={leave} data-play={play}></div>
-      <img className={classes.logo} src="/img/logo.png" alt="the tree temple logo" />
+      <a className={classes.logoLink} href="#intro">
+        <img
+          className={classes.logo}
+          src="/img/logo.png"
+          alt="the tree temple logo"
+        />
+      </a>
     </section>
   )
 }

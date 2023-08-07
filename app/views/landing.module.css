@@ -43,6 +43,9 @@
   background-position-y: 20px;
 }
 
+.logoLink {
+  display: contents;
+}
 .logo {
   width: 250px;
   aspect-ratio: 1 / 1;
