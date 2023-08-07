@@ -1,0 +1,43 @@
+.load {
+  /* this is just a dummy class to add to the body in order that cssBundler
+   * loads this module.
+   * The rule defined below is to satisfay CSS linter "no empty ruleset"
+   */
+  font: inherit;
+}
+
+@font-face {
+  font-family: 'Parchment MF';
+  src: url('../public/fonts/parchment-mf/parcm.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Calibri", Helvetica, Arial, Geneva, sans-serif;
+  --font-family-serif: "Parchment MF", serif; 
+  --font-small: normal 15px/21px var(--font-family);
+  --font-regular: normal 25px/37px var(--font-family);
+  --font-big: normal 30px/46px var(--font-family);
+  --font-huge: normal 60px/64px var(--font-family);
+}
+@media (max-width: 768px) {
+  :root {
+  }
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  font: var(--font-regular);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-serif);
+}

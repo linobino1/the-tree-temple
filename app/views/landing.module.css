@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+.bg {
+  position: absolute;
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+  overflow-y: hidden;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bg > * {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: url("/img/leaves.png");
+  background-size: 100%;
+  background-repeat: round;
+}
+.bg > *.layer2 {
+  background-size: 105%;
+  background-repeat: repeat;
+  background-position: 10px 0;
+  opacity: .6;
+}
+.logo {
+  width: 250px;
+  aspect-ratio: 1 / 1;
+}
