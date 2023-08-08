@@ -10,7 +10,7 @@ export const CallToAction: React.FC = () => {
         <img src='/img/letter.svg' alt='letter' />
         <a href='mailto:stephanie@geihs.de'>stephanie@thetreetemple.org</a>
       </p>
-      <div className={classes.name}>Sign up for the <span className={classes.name}>Tree Temple newsletter</span>:</div>
+      <div className={classes.signup}>Sign up for the Tree Temple newsletter:</div>
       <NewsletterSignup className={classes.newsletter} />
     </section>
   )

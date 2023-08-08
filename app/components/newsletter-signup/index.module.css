@@ -4,10 +4,6 @@
   align-items: center;
   border: 2px solid var(--color-theme);
 }
-.name {
-  font-family: var(--font-family-serif);
-  font-style: italic;
-}
 .container button,
 .container input {
   font: var(--font-small);

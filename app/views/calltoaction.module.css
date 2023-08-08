@@ -7,6 +7,7 @@
   align-items: center;
   padding: 3vw;
 }
+
 .container h3 {
   font: var(--font-huge);
   font-family: var(--font-family-serif);
@@ -28,4 +29,8 @@
 }
 .newsletter {
   margin-block: 3vw;
+}
+.signup {
+  font-family: var(--font-family-serif);
+  font-style: italic;
 }

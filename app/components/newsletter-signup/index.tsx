@@ -5,7 +5,7 @@ export type Props = {
   className?: string;
 }
 
-export const NewsletterSignup: React.FC = ({ className }: Props) => {
+export const NewsletterSignup: React.FC<Props> = ({ className }) => {
   return (
     <form className={`${classes.container} ${className}`}>
       <input type='email' placeholder='me@example.com' />
