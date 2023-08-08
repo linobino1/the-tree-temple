@@ -11,6 +11,22 @@ import {
 import classes from "./root.module.css";
 
 export const links: LinksFunction = () => [
+  // {
+  //   rel: 'preconnect',
+  //   href: 'https://fonts.googleapis.com',
+  // },
+  // {
+  //   rel: 'preconnect',
+  //   href: 'https://fonts.gstatic.com',
+  // },
+  // {
+  //   rel: 'stylesheet',
+  //   href: 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;1,300;1,400&display=swap',
+  // },
+  // {
+  //   rel: 'stylesheet',
+  //   href: 'https://fonts.googleapis.com/css2?family=Italiana:ital,wght@0,300;0,400;1,300;1,400&display=swap',
+  // },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

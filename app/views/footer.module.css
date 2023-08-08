@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  min-height: unset;
+  padding: 2vw 3vw;
+  display: flex;
+  flex-direction: column;
+  font: var(--font-small);
+}
+
+.copyright {
+  font-size: 80%;
+  opacity: .5;
+  align-self: center;
+  margin-block: 1em;
+}
+
+nav {
+  display: flex;
+  column-gap: 3vw;
+  width: 100%;
+  justify-content: center;
+}
+nav > * {
+  
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+  margin: 0 auto;
+  margin-block-end: 5vw;
+}
+.colors img {
+  width: 1.5em;
+  height: fit-content;
+}

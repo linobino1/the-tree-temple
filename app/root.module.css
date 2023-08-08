@@ -14,12 +14,17 @@
 }
 
 :root {
-  --font-family: "Calibri", Helvetica, Arial, Geneva, sans-serif;
-  --font-family-serif: "Parchment MF", serif; 
-  --font-small: normal 15px/21px var(--font-family);
-  --font-regular: normal 25px/37px var(--font-family);
+  --font-family: "Inter", sans-serif;
+  --font-family-serif: "Papyrus", "Italiana", serif; 
+  --font-small: normal 300 21px/28px var(--font-family);
+  --font-regular: normal 300 25px/37px var(--font-family);
   --font-big: normal 30px/46px var(--font-family);
-  --font-huge: normal 60px/64px var(--font-family);
+  --font-huge: normal 46px/64px var(--font-family);
+  
+  --color-theme: #4B6DB2;
+  --color-theme-alt: #0E6E49;
+  --color-theme-light: #4B6DB2;
+  --color-theme-light-alt: #A8D3AF;
 }
 @media (max-width: 768px) {
   :root {
@@ -28,6 +33,7 @@
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 html {
   font: var(--font-regular);
@@ -39,5 +45,37 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  position: relative;
   font-family: var(--font-family-serif);
+}
+h2 {
+  display: inline-block;
+}
+h2::before,
+h2::after {
+  content: ' ';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid var(--color-theme);
+}
+h2.left::before {
+  transform: translateX(-100%);
+}
+
+li,
+p {
+  max-width: 900px;
+  /* margin-inline: 3vw; */
+  /* margin: 0 auto; */
+}
+ul,
+ol {
+  display: flex;
+  flex-direction: inherit;
+}
+
+img {
+  width: 300px;
 }

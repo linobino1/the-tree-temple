@@ -1,13 +1,17 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import classes from './landing.module.css';
+import theme from '../theme.module.css';
 
 export const Landing: React.FC = () => {
   const leave = useRef<HTMLDivElement>(null);
+  const section = useRef<HTMLDivElement>(null);
 
   const [scrollY, setScrollY] = useState(0);
   const [play, setPlay] = useState(0);
 
   const handleScroll = useCallback(() => {
+    
+    // scrolling up or down?
     if (leave.current) {
       if ((scrollY ?? 0) > window.scrollY) {
         // Scrolling up
@@ -17,8 +21,8 @@ export const Landing: React.FC = () => {
         setPlay(1)
       }
     }
-
     setScrollY(window.scrollY)
+    
   }, [scrollY]);
 
   useEffect(() => {
@@ -30,7 +34,8 @@ export const Landing: React.FC = () => {
   }, [handleScroll]);
 
   return (
-    <section className={classes.container}>
+  <>
+    <section ref={section} className={classes.container}>
       <div className={classes.bg}></div>
       <div className={classes.bgSecondary} ref={leave} data-play={play}></div>
       <a className={classes.logoLink} href="#intro">
@@ -41,6 +46,7 @@ export const Landing: React.FC = () => {
         />
       </a>
     </section>
+  </>
   )
 }
   

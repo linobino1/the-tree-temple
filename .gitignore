@@ -7,7 +7,4 @@ node_modules
 
 .vscode
 
-# don't add images we don't need
-/public/img/*
-!/public/img/logo.png
-!/public/img/leaves.png
+.DS_Store

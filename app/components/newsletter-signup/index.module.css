@@ -1,0 +1,25 @@
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid var(--color-theme);
+}
+.name {
+  font-family: var(--font-family-serif);
+  font-style: italic;
+}
+.container button,
+.container input {
+  font: var(--font-small);
+  height: 2em;
+  border: none;
+  padding-inline: .5em;
+  background-color: white;
+}
+.container input::placeholder {
+  color: var(--color-theme);
+}
+.container button::after {
+  content: '\27B5';
+  color: var(--color-theme);
+}
