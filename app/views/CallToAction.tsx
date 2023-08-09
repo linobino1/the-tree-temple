@@ -8,7 +8,7 @@ export const CallToAction: React.FC = () => {
       <h3>Let's play!</h3>
       <p className={classes.email}>
         <img src='/img/letter.svg' alt='letter' />
-        <a href='mailto:stephanie@geihs.de'>stephanie@thetreetemple.org</a>
+        <a href='mailto:stephanie@treetemple.org'>stephanie@treetemple.org</a>
       </p>
       <div className={classes.signup}>Sign up for the Tree Temple newsletter:</div>
       <NewsletterSignup className={classes.newsletter} />
