@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classes from './game.module.css';
 
 export const Game: React.FC = () => {
+  const nextPhase = () => {
+    const active = document.querySelector(`.${classes.phases} li[data-active="true"]`);
+    let next = active?.nextElementSibling;
+    if (!next) {
+      next = document.querySelector(`.${classes.phases} li:first-child`);
+    }
+    
+    active?.setAttribute('data-active', 'false');
+    next?.setAttribute('data-active', 'true');
+    
+    console.log('next', next);
+
+    next?.scrollIntoView();
+  }
+  
+  const phaseRefs = {
+    preparation: useRef<HTMLLIElement>(null),
+    culture: useRef<HTMLLIElement>(null),
+    temple: useRef<HTMLLIElement>(null),
+    calendar: useRef<HTMLLIElement>(null),
+  };
+  const phaseStates = {
+    preparation: useState(false),
+    culture: useState(false),
+    temple: useState(false),
+    calendar: useState(false),
+  };
+
+  useEffect(() => {
+    Object.keys(phaseRefs).forEach((key) => {
+      const ref = phaseRefs[key as keyof typeof phaseRefs];
+      const state = phaseStates[key as keyof typeof phaseStates];
+      if (!ref.current) return;
+      
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          state[1](entry.isIntersecting);
+        },
+        { rootMargin: "-20%" }
+      );
+      console.log(state[0]);
+      ref.current && observer.observe(ref.current);
+      
+      if (state[0]) {
+        // set active
+        const active = document.querySelector(`.${classes.phases} li[data-active="true"]`);
+        active?.setAttribute('data-active', 'false');
+        ref.current?.setAttribute('data-active', 'true');
+          
+        // set seen
+        ref.current?.classList.add(classes.seen);
+        observer.disconnect();
+      }
+
+      return () => observer.disconnect();
+    });
+  }, [phaseRefs, phaseStates]);
+
   return (
     <section id='game' className={classes.container}>
       <div className={classes.overview}>
-        {/* <br /> */}
         <img className={classes.culture} src="/img/culture.png" alt=''/>
         <h2>The Game</h2>
         <div>
@@ -13,28 +70,37 @@ export const Game: React.FC = () => {
             The Tree Temple board game is the essential tool to initiate and organise the participatory process. It comes into play once a group of participants and a plantable space are defined. It is suggested for 11-66 players and to be played in several sessions.
           </p>
           <p>
-            It/Der Spielverlauf guides the players through four phases: preparation, culture, temple & calendar. When everything is planned and modelled, the real life endavour can begin with the tree planting event, the inauguration. 
+            The game guides the players through four phases: preparation, culture, temple & calendar. When everything is planned and modelled, the real life endavour can begin with the tree planting event, the inauguration. 
           </p>
         </div>
       </div>
       <ol className={classes.phases}>
-        <li>
-          <h4>1. Preparation</h4>
+        <li data-active={true} ref={phaseRefs.preparation}>
+          <header>
+            <h4>1. Preparation</h4>
+            <button className={classes.arrow} onClick={nextPhase} aria-label='next' />
+          </header>
           <div className={classes.text}>
             Introduction (story), Character selection (cards), space mapping, tree species profiling, tree-relationship building
           </div>
           <img className={classes.preparation} src="/img/preparation.png" alt='preparation phase'/>
         </li>
-        <li>
-          <h4>2. Culture</h4>
+        <li ref={phaseRefs.culture}>
+          <header>
+            <h4>2. Culture</h4>
+            <button className={classes.arrow} onClick={nextPhase} aria-label='next' />
+          </header>
           <div className={classes.text}>
             Social value negotiation and manifestation, envisioning and brainstorming exercices regarding regular cultural practices (rituals)
           </div>
           <img src="/img/culture1.png" alt='culture phase'/>
           {/* <img src="/img/culture.png" alt='culture phase'/> */}
         </li>
-        <li>
-          <h4>3. Temple</h4>
+        <li ref={phaseRefs.temple}>
+          <header>
+            <h4>3. Temple</h4>
+            <button className={classes.arrow} onClick={nextPhase} aria-label='next' />
+          </header>
           <div className={classes.text}>
             Transfer of the space map onto the board, decision about tree species, learning about tree shaping, negotiating shapes and functions, manual 3D modelling of the temple (phases) # shaping frameworks on board with the model trees
           </div>
@@ -42,8 +108,11 @@ export const Game: React.FC = () => {
             <img src="/img/board.png" alt='temple phase'/>
           </div>
         </li>
-        <li>
-          <h4>4. Calendar</h4>
+        <li ref={phaseRefs.calendar}>
+          <header>
+            <h4>4. Calendar</h4>
+            <button className={classes.arrow} onClick={nextPhase} aria-label='next' />
+          </header>
           <div className={classes.text}>
             Settling on a one-year vision & concrete plan, build a one-year cycle calendar, plan planting event, tackeling extra questions of organization
           </div>

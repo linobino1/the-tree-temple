@@ -23,6 +23,7 @@
 
 img.culture {
   width: 700px;
+  height: auto;
   align-self: center;
 }
 
@@ -45,8 +46,25 @@ ol.phases .text {
   font: var(--font-small);
   text-align: justify;
 }
-ol.phases h4 {
-  vertical-align: text-top;
+ol.phases header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+ol.phases button {
+  appearance: none;
+  border: none;
+  margin: 0;
+  padding-right: 0;
+  background: none;
+  font-size: 2em;
+  color: var(--color-theme);
+  justify-self: end;
+  transform: translateY(-6%);
+}
+ol.phases button::before {
+  content: '\27B5';
 }
 
 .boardImg {
@@ -80,10 +98,49 @@ ol.phases h4 {
 
 img.preparation {
   width: 340px;
+  height: auto;
   margin-block-start: 6vw;
   margin-left: 0;
   margin-right: 0;
 }
 img.calendar {
   width: 343px;
+}
+@media screen and (max-width: 700px) {
+  .container img {
+    margin: unset;
+  }
+  img.culture {
+    width: 100%;
+    padding: 3vw;
+  }
+  
+  ol.phases {
+    padding-inline: 0;
+  }
+  ol.phases li {
+    width: 80vw;
+    min-width: 80vw;
+    padding-inline: 3vw;
+  }
+  ol.phases li:not(:first-child) {
+    opacity: .3;
+  }
+  ol.phases li.seen {
+    opacity: 1;
+  }
+
+  ol.phases .arrow {
+    display: none;
+  }
+  ol.phases li[data-active="true"]:not(:last-child) .arrow {
+    display: block;
+  }
+  
+  img.preparation {
+    width: 100%;
+    margin-top: 6vw;
+  }
+  img.culture {
+  }
 }

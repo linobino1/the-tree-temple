@@ -34,5 +34,5 @@ nav > * {
 }
 .colors img {
   width: 1.5em;
-  height: fit-content;
+  height: auto;
 }

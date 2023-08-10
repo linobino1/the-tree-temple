@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import classes from './landing.module.css';
-import theme from '../theme.module.css';
 
 export const Landing: React.FC = () => {
   const leave = useRef<HTMLDivElement>(null);

@@ -28,6 +28,10 @@
 }
 @media (max-width: 768px) {
   :root {
+    --font-small: normal 300 15px/21px var(--font-family);
+    --font-regular: normal 300 16px/23px var(--font-family);
+    --font-big: normal 20px/28px var(--font-family);
+    --font-huge: normal 27px/43px var(--font-family);
   }
 }
 * {
@@ -61,7 +65,7 @@ h2::after {
   border-bottom: 3px solid var(--color-theme);
 }
 h2.left::before {
-  transform: translateX(-100%);
+  transform: translateX(-99%);
 }
 
 li,

@@ -9,7 +9,7 @@ export const Intro: React.FC = () => {
       <div className={classes.spacer} />
       <div className={`${classes.bar} ${theme.bg}`}>
         <p className={classes.center}>
-          The Tree Temple is a long-term co-creative place-and-community building process for cultivating this recognition in variable public or semi-public urban spaces.
+          The Tree Temple is a long-term place-and-community-making process for variable public or semi-public urban spaces with a participatory approach on Living Architecture (tree shaping).
         </p>
         <p>
           It’s mission is to foster the cultivation of a more attentive and more appreciative relationship to other-than-human life in a playful manner. 

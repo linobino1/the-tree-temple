@@ -33,8 +33,7 @@
 }
 img.storyteller {
   width: 500px;
-  height: fit-content;
-  position: sticky;
+  height: auto;
 }
 .text {
   font-family: var(--font-family-serif);
@@ -49,10 +48,19 @@ img.storyteller {
 .text .back {
   text-align: end;
   font: var(--font-small);
-  /* font-family: inherit; */
   color: var(--color-theme);
+  font-weight: bold;
+  font-family: var(--font-family-serif);
 }
 a:visited,
 a {
   color: inherit;
+}
+
+@media screen and (max-width: 700px) {
+  img.storyteller {
+    width: min(90vw, 300px);
+    margin-top: 6vw;
+  }
+  
 }
