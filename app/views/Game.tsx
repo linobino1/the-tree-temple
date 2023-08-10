@@ -42,7 +42,6 @@ export const Game: React.FC = () => {
         },
         { rootMargin: "-20%" }
       );
-      console.log(state[0]);
       ref.current && observer.observe(ref.current);
       
       if (state[0]) {
