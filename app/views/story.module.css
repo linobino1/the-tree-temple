@@ -57,7 +57,7 @@ a {
   color: inherit;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   img.storyteller {
     width: min(90vw, 300px);
     margin-top: 6vw;

@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from './intro.module.css';
 import theme from '../theme.module.css';
+import { OnScrollFocus } from '~/components/on-scroll-focus';
 
 export const Intro: React.FC = () => {
   return (
+  <OnScrollFocus>
     <section id='intro' className={classes.container}>
-      {/* <img className={classes.center} src="/img/notthisbutthis.png" alt=''/> */}
       <div className={classes.spacer} />
       <div className={`${classes.bar} ${theme.bg}`}>
         <p className={classes.center}>
@@ -19,6 +20,7 @@ export const Intro: React.FC = () => {
         </p>
       </div>
     </section>
+  </OnScrollFocus>
   )
 }
   

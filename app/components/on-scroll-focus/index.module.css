@@ -1,0 +1,7 @@
+.container {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.container[data-active="true"] {
+  opacity: 1;
+}

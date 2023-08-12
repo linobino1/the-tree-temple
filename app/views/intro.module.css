@@ -36,7 +36,7 @@
   margin-right: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .bar {
     padding-inline: 3vw;
   }

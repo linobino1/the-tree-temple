@@ -89,7 +89,7 @@ ul.cards li[data-id="/img/cards/storyteller.png"]:hover {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   ul.cards {
     grid-template-columns: repeat(4, 1fr);
   }
