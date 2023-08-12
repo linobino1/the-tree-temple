@@ -1,6 +1,7 @@
 import React from 'react';
 import root from '../root.module.css';
 import classes from './detail.module.css';
+import OnScrollFocus from '~/components/on-scroll-focus';
 
 export const Detail: React.FC = () => {
   return (
@@ -43,14 +44,14 @@ export const Detail: React.FC = () => {
           </div>
         </li>
       </ol>
-      <div className={classes.bar}>
+      <OnScrollFocus className={classes.bar}>
         <p>
           The Tree Temple is not only a processual living structure, but also stands for a communally negotiated vision about how a flourishing temple garden would be like. The social flourishing is represented by the health and shape of the growing structure.
         </p>
         <p>
           Metaphorically speaking: <em>We plant a vision and let it grow.</em> 
         </p>
-      </div>
+      </OnScrollFocus>
     </section>
   )
 }

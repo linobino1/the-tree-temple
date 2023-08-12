@@ -4,6 +4,7 @@ import { OnScrollFocus } from '~/components/on-scroll-focus';
 import BoardImg from '~/components/board-img';
 
 export const Game: React.FC = () => {
+  const rootMargin = '-20%';
 
   return (
     <section id='game' className={classes.container}>
@@ -20,28 +21,28 @@ export const Game: React.FC = () => {
         </div>
       </div>
       <div className={classes.phases}>
-        <OnScrollFocus>
+        <OnScrollFocus rootMargin={rootMargin}>
           <h4>1. Preparation</h4>
           <div className={classes.text}>
             Introduction (story), Character selection (cards), space mapping, tree species profiling, tree-relationship building
           </div>
           <img className={classes.preparation} src="/img/preparation.png" alt='preparation phase'/>
         </OnScrollFocus>
-        <OnScrollFocus>
+        <OnScrollFocus rootMargin={rootMargin}>
           <h4>2. Culture</h4>
           <div className={classes.text}>
             Social value negotiation and manifestation, envisioning and brainstorming exercices regarding regular cultural practices (rituals)
           </div>
           <img className={classes.culture} src="/img/culture1.png" alt='culture phase'/>
         </OnScrollFocus>
-        <OnScrollFocus>
+        <OnScrollFocus rootMargin={rootMargin}>
           <h4>3. Temple</h4>
           <div className={classes.text}>
             Transfer of the space map onto the board, decision about tree species, learning about tree shaping, negotiating shapes and functions, manual 3D modelling of the temple (phases) # shaping frameworks on board with the model trees
           </div>
           <BoardImg className={classes.imgTemple}/>
         </OnScrollFocus>
-        <OnScrollFocus>
+        <OnScrollFocus rootMargin={rootMargin}>
           <h4>4. Calendar</h4>
           <div className={classes.text}>
             Settling on a one-year vision & concrete plan, build a one-year cycle calendar, plan planting event, tackeling extra questions of organization

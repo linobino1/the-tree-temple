@@ -4,10 +4,12 @@ import classes from "./index.module.css";
 export type Props = {
   children: React.ReactNode;
   leaveActive?: boolean;
+  className?: string;
+  rootMargin?: string;
 };
 
 export const OnScrollFocus: React.FC<Props> = ({
-  children, leaveActive = false, 
+  children, leaveActive = false, className, rootMargin = "-20px",
 }) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const [ state, setState ] = useState(false);
@@ -19,30 +21,22 @@ export const OnScrollFocus: React.FC<Props> = ({
       ([entry]) => {
         setState(entry.isIntersecting);
       },
-      { rootMargin: "-20%" }
+      { rootMargin }
     );
     ref.current && observer.observe(ref.current);
     
+    // set active or inactive
     if (state) {
-      // set other <OnScrollFocus> to inactive
-      // const active = document.querySelector(`.${classes.container}[data-active="true"]`);
-      // active?.setAttribute('data-active', 'false');
-
-      // set active
       ref.current?.setAttribute('data-active', 'true');
-
-      // leave active forever?
-      // observer.disconnect();
     } else if (!leaveActive) {
-      // set inactive
       ref.current?.setAttribute('data-active', 'false');
     }
 
     return () => observer.disconnect();
-  }, [ref, state, leaveActive]);
+  }, [ref, state, leaveActive, rootMargin]);
 
   return (
-    <div ref={ref} className={classes.container}>
+    <div ref={ref} className={`${classes.container} ${className}`}>
       { children }
     </div>
   );
