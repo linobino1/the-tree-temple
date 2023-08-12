@@ -17,6 +17,7 @@ services:
       - media:/app/dist/media
     environment:
       NODE_ENV: production
+      MAILCHIMP_SIGNUP_URL: ${MAILCHIMP_SIGNUP_URL}
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))
