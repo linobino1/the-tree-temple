@@ -6,7 +6,6 @@ import { OnScrollFocus } from '~/components/on-scroll-focus';
 export const Intro: React.FC = () => {
   return (
   <section id='intro' className={classes.container}>
-    <div className={classes.spacer} />
     <OnScrollFocus className={`${classes.bar} ${theme.bg}`}>
       <p className={classes.center}>
         The Tree Temple is a long-term place-and-community-making process for variable public or semi-public urban spaces with a participatory approach on Living Architecture (tree shaping).
