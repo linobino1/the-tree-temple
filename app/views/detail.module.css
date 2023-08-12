@@ -9,8 +9,8 @@
 
 .container ol {
   display: flex;
-  row-gap: 4vw;
-  margin-block: 4vw;
+  row-gap: 10vw;
+  margin-block: 10vw;
 }
 .container li {
   /* display: block; */

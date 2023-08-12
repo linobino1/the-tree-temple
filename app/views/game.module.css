@@ -15,8 +15,9 @@
   padding-inline: 3vw;
 }
 img.game {
-  width: 700px;
-  margin: 2vw 3vw;
+  width: min(700px, 80vw);
+  margin-block-start: 10vw;
+  margin-block-end: 4vw;
   align-self: center;
 }
 
@@ -25,17 +26,28 @@ img.game {
   display: flex;
   column-gap: 6vw;
   width: 100%;
-  overflow-x: auto;
   height: 100%;
+  flex-wrap: wrap;
   overflow-y: hidden;
   padding-inline: 3vw;
-  margin-block: 6vw;
+  margin-block-start: 6vw;
+  justify-content: center;
+  padding-bottom: calc(350px - 3vw);
 }
 .phases > * {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   min-width: 35vw;
+  max-width: 35vw;
+  position: relative;
+  margin-bottom: 10vw;
+}
+.phases > *:nth-child(2n) {
+  top: 350px;
+}
+.phases > *:last-child {
+  margin-bottom: 0;
 }
 .phases .text {
   font: var(--font-small);
@@ -59,6 +71,7 @@ img.culture {
   
 }
 img.calendar {
+  width: 80%;
 }
 
 @media screen and (max-width: 768px) {
@@ -77,11 +90,16 @@ img.calendar {
     padding-inline: 0;
     flex-direction: column;
     row-gap: 6vw;
+    align-items: center;
+    padding-bottom: 0;
   }
   .phases > * {
     width: 100%;
     min-width: unset;
     padding-inline: 3vw;
+    margin: unset;
+    position: static;
+    max-width: unset;
   }
   
   .phases img,
