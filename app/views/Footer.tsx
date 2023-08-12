@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           />
         ))}
         </div>
-        <nav>
+        {/* <nav>
           <NavLink
             to={'/about'}
           >About</NavLink>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           <NavLink
             to={'/legal'}
           >Legal Notice</NavLink>
-        </nav>
+        </nav> */}
         <div className={classes.copyright}>
           Stephanie Geihs {year} all rights reserved
         </div>
