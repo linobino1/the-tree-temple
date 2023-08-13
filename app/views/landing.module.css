@@ -15,14 +15,6 @@
   transform: translateY(-100vh);
 }
 
-.bg {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .bg,
 .bgSecondary {
   position: absolute;
@@ -30,23 +22,45 @@
   left: -10%;
   width: 120%;
   height: 120%;
-  background-image: url("/img/leaves.png");
-  background-size: 100%;
-  background-repeat: round;
+  background-image: url("/img/leaves_1000p.webp");
+  background-image: -webkit-image-set(
+    url("/img/leaves_1000p.webp") 1x,
+    url("/img/leaves_1700p.webp") 2x
+  );
+  background-image: image-set(
+    url("/img/leaves_1000p.webp") 1x,
+    url("/img/leaves_1700p.webp") 2x
+  );
+  background-size: 850px;
+  background-position: center center;
+  background-repeat: repeat;
 }
 .bgSecondary {
-  background-size: 105%;
-  background-repeat: repeat;
-  background-position-x: 10px;
-  background-position-y: 0px;
+  transform: scale(1.1);
+  background-position: 70% 70%;
   opacity: .6;
   
-  transition: .5s background-position-y;
+  transition: .5s background-position;
   transition-delay: .2s;
   transition-timing-function: ease-in-out;
 }
 .bgSecondary[data-play=1] {
-  background-position-y: 20px;
+  background-position: 70% 72%;
+}
+@media screen and (max-width: 700px) {
+  .bg,
+  .bgSecondary {
+    background-image: url("/img/leaves_500p.webp");
+    background-image: -webkit-image-set(
+      url("/img/leaves_500p.webp") 1x,
+      url("/img/leaves_1000p.webp") 2x
+    );
+    background-image: image-set(
+      url("/img/leaves_500p.webp") 1x,
+      url("/img/leaves_1000p.webp") 2x
+    );
+    background-size: 500px;
+  }
 }
 
 .bar {

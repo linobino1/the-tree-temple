@@ -6,7 +6,13 @@ export const Story: React.FC = () => {
   return (
     <section id='story' className={classes.container}>
       <div className={classes.bg} />
-      <img className={classes.storyteller} src='/img/storyteller.png' alt='storyteller'></img>
+      <img
+        className={classes.storyteller}
+        alt='storyteller'
+        src='/img/storyteller_1000p.webp'
+        srcSet='/img/storyteller_500p.webp 500w, /img/storyteller_1000p.webp 1000w'
+        sizes='(max-width: 500px) 100vw, 500px'
+      />
       <div className={classes.text}>
         <h1>The Mission of the Tree Temple</h1>
         <p>

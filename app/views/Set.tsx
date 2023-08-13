@@ -6,19 +6,18 @@ export const Set: React.FC = () => {
   const navigate = useNavigate();
 
   const cards = [
-    '/img/cards/placeguardian.png',
-    '/img/cards/treeshaper.png',
-    '/img/cards/wisdomseeker.png',
-    '/img/cards/storyteller.png',
-    '/img/cards/symbioticgardener.png',
-    //img/cards// 'in6colours_noborder.png',
-    '/img/cards/waterlover.png',
-    '/img/cards/seasoncelebrator.png',
-    '/img/cards/peacebringer.png',
-    '/img/cards/fineartist.png',
-    '/img/cards/soundbody.png',
-    '/img/cards/playfulsoul.png',
-    '/img/logo.png',
+    'placeguardian',
+    'treeshaper',
+    'wisdomseeker',
+    'storyteller',
+    'symbioticgardener',
+    // 'in6colours_noborder',
+    'waterlover',
+    'seasoncelebrator',
+    'peacebringer',
+    'fineartist',
+    'soundbody',
+    'playfulsoul',
   ];
   
   const storyteller = useRef<HTMLLIElement>(null);
@@ -53,7 +52,7 @@ export const Set: React.FC = () => {
         { cards.map((key) => {
           let onClick;
           let ref;
-          if (key === '/img/cards/storyteller.png') {
+          if (key === 'storyteller') {
             onClick = () => {
               console.log('cli')
               navigate('/story');
@@ -62,10 +61,20 @@ export const Set: React.FC = () => {
           }
           return (
             <li key={key} ref={ref} onClick={onClick} data-id={key}>
-              <img src={key} alt={key.replace('/img/cards/', '').replace('.png', '')}/>
+              <img
+                alt={key}
+                src={`/img/cards/${key}_100p.webp`}
+                srcSet={`/img/cards/${key}_100p.webp 100w, /img/cards/${key}_200p.webp 200w, /img/cards/${key}_400p.webp 400w`}
+              />
             </li>
           )
         })}
+        <li data-id='logo'>
+          <img
+            alt='logo'
+            src='/img/logo.png'
+          />
+        </li>
       </ul>
     </section>
   )

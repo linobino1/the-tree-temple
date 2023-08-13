@@ -9,7 +9,12 @@ export const Game: React.FC = () => {
   return (
     <section id='game' className={classes.container}>
       <div className={classes.overview}>
-        <img className={classes.game} src="/img/culture.png" alt=''/>
+        <img
+          className={classes.game}
+          alt='a group playing the game'
+          src='/img/culture_700p.webp'
+          srcSet='/img/culture_350p.webp 350w, /img/culture_700p.webp 700w, /img/culture_1400p.webp 1400w'
+        />
         <h2>The Game</h2>
         <div>
           <p>
@@ -26,14 +31,24 @@ export const Game: React.FC = () => {
           <div className={classes.text}>
             Introduction (story), Character selection (cards), space mapping, tree species profiling, tree-relationship building
           </div>
-          <img className={classes.preparation} src="/img/preparation.png" alt='preparation phase'/>
+          <img
+            className={classes.preparation}
+            alt='preparation phase'
+            src='/img/preparation_360p.webp'
+            srcSet='/img/preparation_360p.webp 360w, /img/preparation_720p.webp 720w'
+          />
         </OnScrollFocus>
         <OnScrollFocus rootMargin={rootMargin}>
           <h4>2. Culture</h4>
           <div className={classes.text}>
             Social value negotiation and manifestation, envisioning and brainstorming exercices regarding regular cultural practices (rituals)
           </div>
-          <img className={classes.culture} src="/img/culture1.png" alt='culture phase'/>
+          <img
+            className={classes.culture}
+            alt='culture phase'
+            src="/img/culture1_360p.webp"
+            srcSet='/img/culture1_360p.webp 360w, /img/culture1_720p.webp 720w'
+          />
         </OnScrollFocus>
         <OnScrollFocus rootMargin={rootMargin}>
           <h4>3. Temple</h4>
@@ -47,7 +62,12 @@ export const Game: React.FC = () => {
           <div className={classes.text}>
             Settling on a one-year vision & concrete plan, build a one-year cycle calendar, plan planting event, tackeling extra questions of organization
           </div>
-          <img className={classes.calendar} src="/img/calendar.png" alt='calendar phase'/>
+          <img
+            className={classes.calendar}
+            alt='calendar phase'
+            src='/img/calendar_360p.webp'
+            srcSet='/img/calendar_360p.webp 360w, /img/calendar_720p.webp 720w'
+          />
         </OnScrollFocus>
       </div>
       

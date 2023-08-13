@@ -33,7 +33,12 @@ export const Detail: React.FC = () => {
           <div className={classes.subtitle}>
             Developing the temple as a cultural place
           </div>
-          <img className={classes.treetemple} src="/img/baumhaus.png" alt=''/>
+          <img
+            className={classes.treetemple}
+            alt='tree temple'
+            src='/img/calendar_770p.webp'
+            srcSet='/img/baumhaus_450p.webp 450w,/img/baumhaus_700p.webp 700w,  /img/baumhaus_900p.webp 900w, /img/baumhaus_1540p.webp 1540w'
+          />
           <div className={classes.text}>
             <p>
               The communities interpretation and enlivenment of the temple garden include the negotiation of shared values and visions for the place as well as the generation of cultural rituals around the material tasks, which further support the recognition of the trees as active participants.

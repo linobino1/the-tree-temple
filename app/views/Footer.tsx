@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
         { colors.map((color, index) => (
           <img
             key={index}
-            src={`/img/colors/${color}.png`}
+            src={`/img/colors/${color}_80p.webp`}
             alt={color}
           />
         ))}

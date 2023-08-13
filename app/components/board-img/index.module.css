@@ -23,12 +23,28 @@
   background-repeat: no-repeat;
 }
 .wrapper::before {
-  background-image: url('/img/manual.png');
+  background-image: url('/img/manual_150p.webp');
+  background-image: -webkit-image-set(
+    url('/img/manual_150p.webp') 1x,
+    url('/img/manual_300p.webp') 2x
+  );
+  background-image: image-set(
+    url('/img/manual_150p.webp') 1x,
+    url('/img/manual_300p.webp') 2x
+  );
   transform: scale(0.4) translate(-50%, -50%);
   z-index: -1;
 }
 .wrapper::after {
-  background-image: url('/img/bird.png');
+  background-image: url('/img/bird_50.webp');
+  background-image: -webkit-image-set(
+    url('/img/bird_50p.webp') 1x,
+    url('/img/bird_100p.webp') 2x
+  );
+  background-image: image-set(
+    url('/img/bird_50p.webp') 1x,
+    url('/img/bird_100p.webp') 2x
+  );
   transform: scale(0.12) translate(222%, -102%);
   z-index: 1;
 }
