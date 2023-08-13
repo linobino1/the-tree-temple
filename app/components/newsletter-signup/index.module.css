@@ -8,6 +8,7 @@
   font: var(--font-small);
   height: 2em;
   border: none;
+  border-radius: 0;
   padding-inline: .5em;
   background-color: white;
 }
