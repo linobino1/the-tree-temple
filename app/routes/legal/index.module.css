@@ -1,0 +1,9 @@
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 6vw 3vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+}

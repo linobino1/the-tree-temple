@@ -46,6 +46,9 @@ export const Footer: React.FC = () => {
         <NavLink
           to={'/legal'}
         >Legal Notice</NavLink>
+        <NavLink
+          to={'/legal#privacy'}
+        >Privacy Policy</NavLink>
       </nav>
       <nav>
         <a
