@@ -37,7 +37,7 @@ export const Detail: React.FC = () => {
             className={classes.treetemple}
             alt='tree temple'
             src='/img/calendar_770p.webp'
-            srcSet='/img/baumhaus_450p.webp 450w,/img/baumhaus_700p.webp 700w,  /img/baumhaus_900p.webp 900w, /img/baumhaus_1540p.webp 1540w'
+            srcSet='/img/baumhaus_450p.webp 450w,/img/baumhaus_770p.webp 770w,  /img/baumhaus_900p.webp 900w, /img/baumhaus_1540p.webp 1540w'
           />
           <div className={classes.text}>
             <p>
