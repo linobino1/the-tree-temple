@@ -42,12 +42,10 @@ h3.cta {
 
 nav {
   display: flex;
-  column-gap: 3vw;
-  width: 100%;
   justify-content: center;
-}
-nav > * {
-  
+  flex-wrap: wrap;
+  gap: 3vw;
+  width: 100%;
 }
 
 .colors {

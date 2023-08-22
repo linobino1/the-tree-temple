@@ -35,7 +35,7 @@
   gap: 1em;
 }
 img.portrait {
-  width: 700px;
+  width: min(90vw, 700px);
   height: auto;
   margin-block: 2em;
 }
