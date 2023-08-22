@@ -36,19 +36,19 @@ export const Footer: React.FC = () => {
       <nav>
         <NavLink
           to={'/'}
-        >Start</NavLink>
+        >start</NavLink>
         <NavLink
           to={'/about'}
-        >About</NavLink>
+        >about</NavLink>
         <NavLink
           to={'/about#contact'}
-        >Contact</NavLink>
+        >contact</NavLink>
         <NavLink
           to={'/legal'}
-        >Legal Notice</NavLink>
+        >legal notice</NavLink>
         <NavLink
           to={'/legal#privacy'}
-        >Privacy Policy</NavLink>
+        >privacy policy</NavLink>
       </nav>
       <nav>
         <a

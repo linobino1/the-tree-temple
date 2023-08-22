@@ -32,6 +32,7 @@ h3.cta {
 .signup {
   font-family: var(--font-family-serif);
   font-style: italic;
+  text-align: center;
 }
 
 .copyright {
@@ -40,19 +41,20 @@ h3.cta {
   align-self: center;
 }
 
-nav {
+.container nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 3vw;
   width: 100%;
+  max-width: 80vw;
 }
 
 .colors {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 20em;
+  width: min(20em, 80vw);
   margin-inline: auto;
   margin-block: 2em 1em;
 }
