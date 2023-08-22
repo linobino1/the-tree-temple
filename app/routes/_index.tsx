@@ -46,8 +46,13 @@ export function links() {
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "The Tree Temple" },
-    { name: "description", content: "" },
+    {
+      title: "The Tree Temple"
+    },
+    {
+      wname: "description",
+      content: "The Tree Temple is a long-term place-and-community-making process for variable public or semi-public urban spaces with a participatory approach on Living Architecture (tree shaping)."
+    },
   ];
 };
 
