@@ -1,8 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import classes from './index.module.css';
-import { NavLink } from "@remix-run/react";
-import CallToAction from "~/views/CallToAction";
-import NewsletterSignup from "~/components/newsletter-signup";
+import { Footer } from "~/views/Footer";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -13,38 +11,28 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className={classes.container}>
-      <header>
-        <NavLink
-          to={'/'}
-        >
-          <img className={classes.logo} src="/img/logo.png" alt="logo" />
-        </NavLink>
-      </header>
-      <main>
-        <div className={classes.info}>
-          <h1>About</h1>
-          <p>Stephanie Geihs</p>
-          <p>Living Architecture, Interbeing Studies, Lisbon Lover</p>
-          <ul>
-            <li>Master of Science, Philosophy</li>
-            <li>Master of Science, Design for Sustainability</li>
-          </ul>
+    <>
+      <main className={classes.container}>
+        <section id="about">
+          <h2>about</h2>
+          <h3>Stephanie Geihs</h3>
+          <p className={classes.tags}>Sustainability Designer, Philosopher & Illustrator</p>
+          <p className={classes.info}>interested in ecological consciousness, regenerative design, biodesign, nature-based solutions, designing with plants and rainwater, sustainable cities & communities, circular solutions, sustainable system design</p>
+          <img className={classes.portrait} src="/img/stephanie.jpg" alt="portrait" />
+        </section>
+
+        <section id="contact">
+          <h2>contact</h2>
           <p>
-            <a href="https://linkedin.com/in/stephaniegeihs">linkedin.com/in/stephaniegeihs</a>
+            For inquiries about The Tree Temple or other collaborations, please contact me via email at <a href="mailto:stephanie@treetemple.org">stephanie@treetemple.org</a>.
           </p>
-        </div>
-        <img className={classes.portrait} src="/img/stephanie.jpg" alt="portrait" />
-        <div className={classes.contact}>
-          <h1>Contact</h1>
           <p>
-            Contact me for more information about the Tree Temple, to book a session or to collaborate. I am looking forward to hearing from you!
+            Looking forward to hearing from you!
           </p>
-          <p>Sign up for the Tree Temple newsletter:</p>
-          <NewsletterSignup />
-        </div>
+        </section>
       </main>
 
-    </div>
+      <Footer />
+    </>
   );
 }

@@ -5,14 +5,13 @@ import { Detail } from "~/views/Detail";
 import { Footer } from "~/views/Footer";
 import { Game } from "~/views/Game";
 import { Set } from "~/views/Set";
-import { CallToAction } from "~/views/CallToAction";
 
 export function links() {
   return [
    {
      rel: 'icon',
      type: 'image/png',
-     sizes: '32x32',
+     sizes: '512x512',
      href: '/favicon.png',
    },
   //  {
@@ -60,8 +59,6 @@ export default function Index() {
       <Detail />
       <Game />
       <Set />
-      <CallToAction />
-      {/* <Story /> */}
       <Footer />
     </main>
   );
