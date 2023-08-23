@@ -34,6 +34,14 @@
   justify-content: center;
   gap: 1em;
 }
+/* .linkedinWrapper {
+  text-align: right;
+}
+img.linkedin {
+  display: inline-block;
+  width: 1em;
+  height: auto;
+} */
 img.portrait {
   width: min(90vw, 700px);
   height: auto;

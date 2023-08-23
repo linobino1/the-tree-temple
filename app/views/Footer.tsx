@@ -50,15 +50,6 @@ export const Footer: React.FC = () => {
           to={'/legal#privacy'}
         >privacy policy</NavLink>
       </nav>
-      <nav>
-        <a
-          href="https://linkedin.com/in/stephanie-geihs-a08580234"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className={classes.linkedin} src="/img/linkedin_white.png" alt='linkedin logo'/>
-        </a>
-      </nav>
       <div className={classes.copyright}>
         Stephanie Geihs {year} all rights reserved
       </div>
