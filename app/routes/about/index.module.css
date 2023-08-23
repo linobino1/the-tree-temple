@@ -57,7 +57,6 @@ img.portrait {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-img.linkedin {
-  width: 2em;
-  height: auto;
+.treeTemple {
+  font-family: var(--font-family-serif);
 }
