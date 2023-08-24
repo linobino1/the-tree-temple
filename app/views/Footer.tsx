@@ -46,9 +46,6 @@ export const Footer: React.FC = () => {
         <NavLink
           to={'/legal'}
         >legal notice</NavLink>
-        <NavLink
-          to={'/legal#privacy'}
-        >privacy policy</NavLink>
       </nav>
       <div className={classes.copyright}>
         Stephanie Geihs {year} all rights reserved
