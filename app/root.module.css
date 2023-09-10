@@ -6,13 +6,6 @@
   font: inherit;
 }
 
-@font-face {
-  font-family: 'Parchment MF';
-  src: url('../public/fonts/parchment-mf/parcm.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-}
-
 :root {
   --font-family: "Inter", sans-serif;
   --font-family-serif: "Papyrus", "Italiana", serif; 
