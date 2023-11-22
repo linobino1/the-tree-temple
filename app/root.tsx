@@ -1,5 +1,10 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import { json, type LinksFunction, type LoaderFunction } from "@remix-run/node";
+import {
+  type HeadersFunction,
+  type LinksFunction,
+  type LoaderFunction,
+  json,
+} from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -10,6 +15,20 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 import classes from "./root.module.css";
+
+/**
+ * caching strategy:
+ *  - browser cache: 1 hour
+ *  - cdn cache: 1 day
+ *  - stale-while-revalidate: 4 weeks
+ *
+ * 
+ */
+export const headers: HeadersFunction = () => {
+  return {
+    "Cache-Control": "max-age=3600 s-maxage=86400 stale-while-revalidate=2419200",
+  };
+};
 
 export const links: LinksFunction = () => [
   // {
