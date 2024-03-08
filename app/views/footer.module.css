@@ -48,6 +48,10 @@ h3.cta {
   width: 100%;
   max-width: 80vw;
 }
+.instagram {
+  width: 1.2em;
+  height: 1.2em;
+}
 
 .colors {
   display: flex;

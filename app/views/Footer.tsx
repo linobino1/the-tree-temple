@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './footer.module.css';
 import theme from '../theme.module.css';
-import { NavLink } from '@remix-run/react';
+import { Link, NavLink } from '@remix-run/react';
 import { NewsletterSignup } from '~/components/newsletter-signup';
 
 export const Footer: React.FC = () => {
@@ -46,6 +46,9 @@ export const Footer: React.FC = () => {
         <NavLink
           to={'/legal'}
         >legal notice</NavLink>
+        <Link
+          to={'https://www.instagram.com/the_tree_temple_casabranca/'} target='_blank' rel='noreferrer noopener' aria-label='instagram link'
+        ><img src='/img/instagram.svg' alt='instagram logo' className={classes.instagram} /></Link>
       </nav>
       <div className={classes.copyright}>
         Stephanie Geihs {year} all rights reserved
